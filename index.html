@@ -38,9 +38,28 @@
 	width: 100%;
 }
 
-@media screen and (max-width: 770px) {
+#hd-1 {
+	margin: auto;
+	font-weight: 500;
+	color: #ddffff;
+}
+
+@media screen and (max-width: 767px) {
+	#hder-home {
+		padding: 5px;
+		font-size: 30px;
+	}
 	.col-md-3 {
 		display: none;
+	}
+	.col-3 {
+		height: 60px;
+		overflow: hidden;
+		font-size: 35px;
+		color: #ddffff;
+		text-align: center;
+		padding-top: 0px;
+		background: #483d8b;
 	}
 	#widget {
 		display: none;
@@ -52,12 +71,19 @@
 	}
 }
 
-@media screen and (min-width: 781px) {
+@media screen and (min-width: 768px) {
+	#hder-home {
+		padding: 5px;
+		font-size: 60px;
+	}
+	.col-3 {
+		display: none;
+	}
 	.col-md-12 {
 		display: none;
 	}
 	#title {
-		width: 36%;
+		width: 50.5%;
 		float: right;
 		text-align: center;
 		padding-top: 300px;
@@ -74,7 +100,7 @@
 .col-md-3 {
 	height: 100px;
 	overflow: hidden;
-	font-size: 70px;
+	font-size: 60px;
 	color: #ddffff;
 	text-align: center;
 	padding-top: 0px;
@@ -116,10 +142,6 @@ input {
 	display: flex;
 }
 
-#hd-1 {
-	color: #ddffff;
-}
-
 #vs {
 	display: flex;
 	justify-content: center;
@@ -143,8 +165,10 @@ input {
 	left: 65%;
 	bottom: 500px;
 	width: 360px;*/
-	width: 32%;
+	margin-right: 5%;
+	width: 20%;
 	float: right;
+	width: 20%;
 }
 
 .form-control:focus {
@@ -157,10 +181,16 @@ input {
 	margin: auto;
 }
 
+#sch-button {
+	size: 40px;
+	font-size: 30px;
+	box-shadow: 2px 3px 4px -3px rgba(72, 61, 139, 5);
+}
+
 #muner-button {
 	float: right;
-	margin-right: 16%;
-	margin-bottom: 10px;
+	margin-right: 3%;
+	margin-bottom: 5px;
 	width: 50px;
 	height: 50px;
 	box-shadow: 1px 7px 13px -5px rgba(0, 0, 0, 1);
@@ -178,24 +208,30 @@ input {
 </head>
 <body>
 	<main>
-		<div class="container">
+		<div class="container-fluid">
 			<header class="d-flex flex-wrap justify-content-center py-3 mb-4 "
 				id="tasic">
-				<a href="test1.html"
+				<a href="index.html"
 					class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none"
-					id="hd-1"
-					style="margin: auto; font-weight: bold; font-size: 100px;"> <img
-					id="imsi" src="imsi.png"><span class="fs-4">홈페이지 이름</span>
+					id="hd-1"> <img id="imsi" src="imsi.png"><span
+					id="hder-home">홈페이지 이름</span>
 				</a>
 				<div class="row">
-					<div class="col-md-3" onclick="location">아이템</div>
+					<div class="col-md-3" onclick="location.href='item.html'">아이템</div>
 					<div class="col-md-3">랭킹</div>
 					<div class="col-md-3">공지사항</div>
 					<div class="col-md-3">토론게시판</div>
 				</div>
+				<div class="row">
+					<div class="col-3" onclick="location.href='item.html'">아이템</div>
+					<div class="col-3">랭킹</div>
+					<div class="col-3">공지사항</div>
+					<div class="col-3">토론게시판</div>
+				</div>
 			</header>
 		</div>
-		<div class="container" style="font-size: 300%; text-align: center;">
+		<div class="container-fluid"
+			style="font-size: 300%; text-align: center; padding-bottom: 5px;">
 			<div id="kimtasic" class="bg-image">
 				<!-- <div style="font-size: 100px; text-align: center;">제목</div> -->
 				<div id="widget">
@@ -233,7 +269,8 @@ input {
 				</div>
 			</div>
 			<div style="text-align: center;">
-				<button class="btn btn-default" type="submit">검색</button>
+				<button class="btn btn-outline-primary" type="submit"
+					id="sch-button">검색</button>
 			</div>
 		</div>
 		<div id="muner-button">
@@ -241,8 +278,8 @@ input {
 				onclick="location.href='login.html'"></img>
 		</div>
 		<br>
-		<div class="container">
-			<footer class="py-3 my-4" style="font-size: 150%;">
+		<div class="container-fluid">
+			<footer class="py-3 my-4" style="font-size: 160%;">
 				<ul class="nav justify-content-center border-bottom pb-3 mb-3">
 					<li class="nav-item"><a href="#"
 						class="nav-link px-2 text-muted">사이트 소개</a></li>
